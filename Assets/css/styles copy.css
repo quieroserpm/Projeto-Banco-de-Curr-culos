@@ -1,0 +1,290 @@
+* {/*no asterisco entra todo lo que va a ser repetido no site*/
+    padding: 0; /*para adicionar elementos dejar padding y margen cero pq al adicionar elementos estos pueden tener margen y padding*/
+    margin: 0;
+    box-sizing: border-box; /*suma margen y padding si se adicionan y engloba como un todo*/
+    font-family: 'Roboto Slab', serif;
+}
+
+ul {
+    list-style: none;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    color: rgba(0, 0, 0, 0.87);
+    background-color: transparent;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px; /*antes 50px*/
+    margin-bottom: 50px; /*antes 45px*/
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li{
+    padding:10px ;
+}
+
+header ul li a{
+    transition: 300ms;
+}
+
+header ul li a:hover{
+    color:#F07797;
+    text-decoration: underline;
+}
+
+/* classes */ 
+
+.container{
+    text-align: center;
+}
+
+.name h1{
+    color: #8B0000;
+    font-size: 80px;
+}
+
+.name h5{
+    color: #8B0000;
+    font-size: 20px;
+}
+
+#arrow{
+    font-size: 30px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+#check{
+    display: inline-block;
+}
+
+/*keyframes llama la animation del arrow para que pierda visibilidad y regresar a mostrarse*/
+@keyframes blink {
+    to{
+        visibility: hidden;
+    }    
+}
+
+#animation{
+    transition: 300ms;
+}
+
+.rotate{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.active{
+    display: block !important;
+}
+
+#about p{
+    max-width: 600px;
+    margin:0 auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex div{
+    border: 0.5px solid #A5AE9D; /*para colocar borda nas imagens*/
+    margin: 15px;
+    flex-basis: 100%;
+}
+
+.flex img{
+max-width: 450px;
+}
+
+.flex h3{
+    color: #8B0000;
+    transition: 300ms;
+}
+
+.flex h3:hover{
+    color:#F07797;
+    text-decoration: underline;
+}
+
+#site p{
+    border-top: thick double #8B0000;
+    padding: 50px;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 60%; /*antes 50%*/
+    margin:0 auto;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+h2{
+    color: #8B0000;
+}
+
+.grid1 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: thick double #8B0000 ;
+    margin-top: 30px;
+    display: grid; 
+    gap: 10px;
+    grid-template-areas: 
+    "item1 item1 item1"
+    "item2 item3 ."
+    "item4 item5 item6"
+    "item10 item7 item14"
+    "item8 item9 item13"
+    "item11 item12 ."
+    "item16 item16 item16"
+    "item17 item18 item22"
+    "item19 item20 . "
+    ". item21 ."
+    ; 
+}
+
+.grid1-1 {
+    grid-area: item1;/*dados pessoais*/
+}
+.grid1-1-1 {
+    grid-area: item2;/*nome completo*/
+}
+.grid1-1-2 {
+    grid-area: item3;/*cargo*/
+}
+.grid1-1-3 {
+    grid-area: item4;/*data nacimento*/
+}
+.grid1-1-4 {
+    grid-area: item5;/*estado civil*/   
+}
+.grid1-1-5 {
+    grid-area: item6;/*genero*/
+}
+.grid1-1-6 {
+    grid-area: item7;/*endereco*/
+}
+.grid1-1-7 {
+    grid-area: item8;/*bairro*/
+}
+.grid1-1-8 {
+    grid-area: item9;/*cidade*/
+}
+.grid1-1-9 {
+    grid-area: item10;/*cep*/
+}
+.grid1-1-10 {
+    grid-area: item11;/*celular*/
+}
+.grid1-1-11 {
+    grid-area: item12;/*email*/
+}
+.grid1-1-12 {
+    grid-area: item13;/*estado*/
+}
+.grid1-1-13 {
+    grid-area: item14;/*número*/
+}
+.grid1-2 {
+    grid-area: item16;/*documentos*/
+}
+.grid1-2-1 {
+    grid-area: item17;/*identidade*/
+}
+.grid1-2-2 {
+    grid-area: item18;/*cpf*/
+}
+.grid1-2-3 {
+    grid-area: item19;/*vehiculo*/
+}
+.grid1-2-4 {
+    grid-area: item20;/*habilitacao*/
+}
+.grid1-2-5 {
+    grid-area: item22;/*button cpf*/
+}
+.form {
+    grid-area: item21;
+}
+
+.form input{
+    width: 100%;
+    padding: 5px 10px;
+    border-color: #8B0000;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.form button{
+    width: 45%;
+    padding: 5px 10px;
+    background:linear-gradient(to right, #F07797 50%, #8B0000 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: #FFF7F3;
+    font-weight: 500;
+    border-color: #8B0000;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: -5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form button:hover{
+    background-position: left bottom;
+}
+
+/*responsividade*/
+@media only screen and (max-width: 768px){
+    .form{
+    width: 100%;
+   }
+}
+
+@media only screen and (max-width: 480px){ /*480px para celulares*/
+    header{
+        font-size: 25px;
+    }
+    header ul li{
+    padding: 10px;
+    }
+    ul{
+        font: size 16px;
+    }
+    .name h1{
+        font-size: 30px;
+    }
+    .name h5{
+        font-size: 15px;
+    }
+    #about p{
+        max-width: 80%;
+        text-align: justify;
+    }
+}
+
